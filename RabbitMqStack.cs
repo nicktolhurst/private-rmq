@@ -27,9 +27,6 @@ class RabbitMqStack : Stack
 
     [Output]
     public Output<string> RmqFqdn { get; private set; } = Output.Create(string.Empty);
-    
-    [Output]
-    public Output<string?> vmIp { get; private set; } = Output.Create(string.Empty);
 
     private void Stack()
     {
@@ -79,7 +76,6 @@ class RabbitMqStack : Stack
 
         // Set IaC outputs.
         this.RmqFqdn = record.Fqdn; 
-        this.vmIp = pip.IpAddress;
     }
 
     private ResourceGroup ResourceGroup(string name)
