@@ -52,19 +52,17 @@ class RabbitMqStack : Stack
         var networkInterface = NetworkInterface("ni-vm", vmSNet, pip, vmResourceGroup);
         var vm = Vm("vm-service", vmResourceGroup, pip, networkInterface, vmVNet, vmSNet);
 
-
-        var allowNickHomeNetworkSsh = NsgRule("Allow Nick SSH", "*", "*", pip.IpAddress, "22", "Allow", "Inbound", "Tcp", 100);
-        var nsgVm = Nsg("nsg-vm", vmResourceGroup, new [] { allowNickHomeNetworkSsh });
+        // Create an NSG and associate it to the VM's attached network interface.
         _ = new NetworkInterfaceSecurityGroupAssociation("sNet-nsg-vm", new NetworkInterfaceSecurityGroupAssociationArgs
         {
-            NetworkSecurityGroupId = nsgVm.Id,
+            NetworkSecurityGroupId = NsgDefaultRules("nsg-vm", vmResourceGroup).Id,
             NetworkInterfaceId = networkInterface.Id,
         });
 
-        var nsgRmq = Nsg("nsg-rmq", rmqResourceGroup, new [] { allowNickHomeNetworkSsh });
+        // Create an NSG and associate it to the container instance subnet.
         _ = new SubnetNetworkSecurityGroupAssociation("sNet-nsg-vm", new SubnetNetworkSecurityGroupAssociationArgs
         {
-            NetworkSecurityGroupId = nsgRmq.Id,
+            NetworkSecurityGroupId = NsgDefaultRules("nsg-rmq", rmqResourceGroup).Id,
             SubnetId = rmqSNet.Id,
         });
 
@@ -118,7 +116,12 @@ class RabbitMqStack : Stack
                 {
                     Name = "rabbitmq",
                     Image = "rabbitmq",
-                    Commands = { "/bin/bash", "-c", $"(sleep {ContainerStartupDelay} && docker-entrypoint.sh rabbitmq-server) & wait" },
+                    Commands =
+                    {
+                        "/bin/bash",
+                        "-c",
+                        $"(sleep {ContainerStartupDelay} && docker-entrypoint.sh rabbitmq-server) & wait"
+                    },
                     Cpu = 1,
                     Memory = 1.5,
                     Volumes =
@@ -145,9 +148,8 @@ class RabbitMqStack : Stack
         });
     }
     
-    private GroupContainerVolumeArgs ContainerVolume(string name, Account storageAccount, string mountPath)
-    {
-        return new GroupContainerVolumeArgs
+    private GroupContainerVolumeArgs ContainerVolume(string name, Account storageAccount, string mountPath) =>
+        new GroupContainerVolumeArgs
         {
             Name = name,
             MountPath = mountPath,
@@ -155,8 +157,7 @@ class RabbitMqStack : Stack
             StorageAccountKey = storageAccount.PrimaryAccessKey,
             ShareName = FileShare(storageAccount, name).Name
         };
-    }
-    
+
     private GroupContainerPortArgs ContainerPort(int port, string protocol)
     {
         return new GroupContainerPortArgs
@@ -333,13 +334,12 @@ class RabbitMqStack : Stack
     }
 
 
-    private NetworkSecurityGroup Nsg(string name, ResourceGroup resourceGroup, InputList<NetworkSecurityGroupSecurityRuleArgs> nsgRules)
+    private NetworkSecurityGroup NsgDefaultRules(string name, ResourceGroup resourceGroup)
     {
         return new NetworkSecurityGroup(name, new NetworkSecurityGroupArgs
         {
             Location = resourceGroup.Location,
             ResourceGroupName = resourceGroup.Name,
-            SecurityRules = nsgRules,
         });
     }
 
