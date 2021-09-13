@@ -1,0 +1,1566 @@
+{
+    "version": 3,
+    "checkpoint": {
+        "stack": "dev",
+        "latest": {
+            "manifest": {
+                "time": "2021-09-12T16:21:00.0340708+01:00",
+                "magic": "b9252cabf480c88f281e0d29a10d6b8889ddc9fcbc466d4f9374c0fb69b330b8",
+                "version": "v3.12.0"
+            },
+            "secrets_providers": {
+                "type": "passphrase",
+                "state": {
+                    "salt": "v1:1uwbXtn9U2A=:v1:kM9Sk13PiObB8x52:O983H1iUrn3GXzZt/Rcg1NfTNZTcIw=="
+                }
+            },
+            "resources": [
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "custom": false,
+                    "type": "pulumi:pulumi:Stack",
+                    "outputs": {
+                        "RmqFqdn": "a-rmq.example.internal.",
+                        "vmIp": ""
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0",
+                    "custom": true,
+                    "id": "f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "type": "pulumi:providers:azure",
+                    "inputs": {
+                        "version": "3.11.0"
+                    },
+                    "outputs": {
+                        "version": "3.11.0"
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-dns",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-dnsae258f85",
+                    "type": "azure:core/resourceGroup:ResourceGroup",
+                    "inputs": {
+                        "__defaults": [
+                            "name"
+                        ],
+                        "location": "uksouth",
+                        "name": "rg-dnsae258f85"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":5400000000000,\"delete\":5400000000000,\"read\":300000000000,\"update\":5400000000000}}",
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-dnsae258f85",
+                        "location": "uksouth",
+                        "name": "rg-dnsae258f85",
+                        "tags": {}
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "location": null
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a",
+                    "type": "azure:core/resourceGroup:ResourceGroup",
+                    "inputs": {
+                        "__defaults": [
+                            "name"
+                        ],
+                        "location": "uksouth",
+                        "name": "rg-rmqd8c3a01a"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":5400000000000,\"delete\":5400000000000,\"read\":300000000000,\"update\":5400000000000}}",
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a",
+                        "location": "uksouth",
+                        "name": "rg-rmqd8c3a01a",
+                        "tags": {}
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "location": null
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5",
+                    "type": "azure:core/resourceGroup:ResourceGroup",
+                    "inputs": {
+                        "__defaults": [
+                            "name"
+                        ],
+                        "location": "uksouth",
+                        "name": "rg-vma41703c5"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":5400000000000,\"delete\":5400000000000,\"read\":300000000000,\"update\":5400000000000}}",
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5",
+                        "location": "uksouth",
+                        "name": "rg-vma41703c5",
+                        "tags": {}
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "location": null
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/publicIp:PublicIp::pip-vm",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/publicIPAddresses/pip-vm9d5925e0",
+                    "type": "azure:network/publicIp:PublicIp",
+                    "inputs": {
+                        "__defaults": [
+                            "idleTimeoutInMinutes",
+                            "ipVersion",
+                            "name",
+                            "sku"
+                        ],
+                        "allocationMethod": "Dynamic",
+                        "idleTimeoutInMinutes": 4,
+                        "ipVersion": "IPv4",
+                        "location": "uksouth",
+                        "name": "pip-vm9d5925e0",
+                        "resourceGroupName": "rg-vma41703c5",
+                        "sku": "Basic"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "allocationMethod": "Dynamic",
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/publicIPAddresses/pip-vm9d5925e0",
+                        "idleTimeoutInMinutes": 4,
+                        "ipAddress": "",
+                        "ipVersion": "IPv4",
+                        "location": "uksouth",
+                        "name": "pip-vm9d5925e0",
+                        "resourceGroupName": "rg-vma41703c5",
+                        "sku": "Basic",
+                        "tags": {},
+                        "zones": null
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "allocationMethod": null,
+                        "location": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm"
+                        ],
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-vm",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7",
+                    "type": "azure:network/virtualNetwork:VirtualNetwork",
+                    "inputs": {
+                        "__defaults": [
+                            "location",
+                            "name"
+                        ],
+                        "addressSpaces": [
+                            "10.1.0.0/16"
+                        ],
+                        "location": "uksouth",
+                        "name": "vnet-vm9d0083a7",
+                        "resourceGroupName": "rg-vma41703c5"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "addressSpaces": [
+                            "10.1.0.0/16"
+                        ],
+                        "ddosProtectionPlan": null,
+                        "dnsServers": [],
+                        "guid": "c86c6e92-166a-42a1-afb6-863367948841",
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7",
+                        "location": "uksouth",
+                        "name": "vnet-vm9d0083a7",
+                        "resourceGroupName": "rg-vma41703c5",
+                        "subnets": [],
+                        "tags": {}
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "addressSpaces": null,
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-rmq",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/virtualNetworks/vnet-rmq288663d6",
+                    "type": "azure:network/virtualNetwork:VirtualNetwork",
+                    "inputs": {
+                        "__defaults": [
+                            "location",
+                            "name"
+                        ],
+                        "addressSpaces": [
+                            "10.2.0.0/16"
+                        ],
+                        "location": "uksouth",
+                        "name": "vnet-rmq288663d6",
+                        "resourceGroupName": "rg-rmqd8c3a01a"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "addressSpaces": [
+                            "10.2.0.0/16"
+                        ],
+                        "ddosProtectionPlan": null,
+                        "dnsServers": [],
+                        "guid": "7a650f1a-f960-4410-8e14-bb1511023e9a",
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/virtualNetworks/vnet-rmq288663d6",
+                        "location": "uksouth",
+                        "name": "vnet-rmq288663d6",
+                        "resourceGroupName": "rg-rmqd8c3a01a",
+                        "subnets": [],
+                        "tags": {}
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "addressSpaces": null,
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/account:Account::sarmqsa",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Storage/storageAccounts/sarmqsa622a59b8",
+                    "type": "azure:storage/account:Account",
+                    "inputs": {
+                        "__defaults": [
+                            "enableHttpsTrafficOnly",
+                            "isHnsEnabled",
+                            "name"
+                        ],
+                        "accountKind": "StorageV2",
+                        "accountReplicationType": "LRS",
+                        "accountTier": "Standard",
+                        "enableHttpsTrafficOnly": true,
+                        "isHnsEnabled": false,
+                        "location": "uksouth",
+                        "name": "sarmqsa622a59b8",
+                        "resourceGroupName": "rg-rmqd8c3a01a"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":3600000000000,\"delete\":3600000000000,\"read\":300000000000,\"update\":3600000000000},\"schema_version\":\"2\"}",
+                        "accessTier": "Hot",
+                        "accountKind": "StorageV2",
+                        "accountReplicationType": "LRS",
+                        "accountTier": "Standard",
+                        "blobProperties": null,
+                        "enableHttpsTrafficOnly": true,
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Storage/storageAccounts/sarmqsa622a59b8",
+                        "identity": null,
+                        "isHnsEnabled": false,
+                        "location": "uksouth",
+                        "name": "sarmqsa622a59b8",
+                        "networkRules": {
+                            "bypasses": [
+                                "AzureServices"
+                            ],
+                            "defaultAction": "Allow",
+                            "ipRules": [],
+                            "virtualNetworkSubnetIds": []
+                        },
+                        "primaryAccessKey": "5ArwFklXKV/pqGsdRzVCuEJQUSExuFnDzaUSzFq1UJ5oGBk6TZx5LL14WRvWUMqryzt9GLOhp6qwg1FQMe2e+g==",
+                        "primaryBlobConnectionString": "DefaultEndpointsProtocol=https;BlobEndpoint=https://sarmqsa622a59b8.blob.core.windows.net/;AccountName=sarmqsa622a59b8;AccountKey=5ArwFklXKV/pqGsdRzVCuEJQUSExuFnDzaUSzFq1UJ5oGBk6TZx5LL14WRvWUMqryzt9GLOhp6qwg1FQMe2e+g==",
+                        "primaryBlobEndpoint": "https://sarmqsa622a59b8.blob.core.windows.net/",
+                        "primaryBlobHost": "sarmqsa622a59b8.blob.core.windows.net",
+                        "primaryConnectionString": "DefaultEndpointsProtocol=https;AccountName=sarmqsa622a59b8;AccountKey=5ArwFklXKV/pqGsdRzVCuEJQUSExuFnDzaUSzFq1UJ5oGBk6TZx5LL14WRvWUMqryzt9GLOhp6qwg1FQMe2e+g==;EndpointSuffix=core.windows.net",
+                        "primaryDfsEndpoint": "https://sarmqsa622a59b8.dfs.core.windows.net/",
+                        "primaryDfsHost": "sarmqsa622a59b8.dfs.core.windows.net",
+                        "primaryFileEndpoint": "https://sarmqsa622a59b8.file.core.windows.net/",
+                        "primaryFileHost": "sarmqsa622a59b8.file.core.windows.net",
+                        "primaryLocation": "uksouth",
+                        "primaryQueueEndpoint": "https://sarmqsa622a59b8.queue.core.windows.net/",
+                        "primaryQueueHost": "sarmqsa622a59b8.queue.core.windows.net",
+                        "primaryTableEndpoint": "https://sarmqsa622a59b8.table.core.windows.net/",
+                        "primaryTableHost": "sarmqsa622a59b8.table.core.windows.net",
+                        "primaryWebEndpoint": "https://sarmqsa622a59b8.z33.web.core.windows.net/",
+                        "primaryWebHost": "sarmqsa622a59b8.z33.web.core.windows.net",
+                        "queueProperties": {
+                            "corsRules": [],
+                            "hourMetrics": {
+                                "enabled": true,
+                                "includeApis": true,
+                                "retentionPolicyDays": 7,
+                                "version": "1.0"
+                            },
+                            "logging": {
+                                "delete": false,
+                                "read": false,
+                                "retentionPolicyDays": 0,
+                                "version": "1.0",
+                                "write": false
+                            },
+                            "minuteMetrics": {
+                                "enabled": false,
+                                "includeApis": false,
+                                "retentionPolicyDays": 0,
+                                "version": "1.0"
+                            }
+                        },
+                        "resourceGroupName": "rg-rmqd8c3a01a",
+                        "secondaryAccessKey": "ezfl1TLAZAwwj2+EBpTxl+fBpqBQsn86ZV/mQhN4CJCGExIvkBs0Ov2zasHPNRzXjhWgD2OPFIflZEkluFr8Rg==",
+                        "secondaryBlobConnectionString": "",
+                        "secondaryConnectionString": "DefaultEndpointsProtocol=https;AccountName=sarmqsa622a59b8;AccountKey=ezfl1TLAZAwwj2+EBpTxl+fBpqBQsn86ZV/mQhN4CJCGExIvkBs0Ov2zasHPNRzXjhWgD2OPFIflZEkluFr8Rg==;EndpointSuffix=core.windows.net",
+                        "secondaryLocation": "",
+                        "staticWebsite": null,
+                        "tags": {}
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "accountKind": null,
+                        "accountReplicationType": null,
+                        "accountTier": null,
+                        "location": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq"
+                        ],
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/share:Share::vol-rmq-schema",
+                    "custom": true,
+                    "id": "https://sarmqsa622a59b8.file.core.windows.net/vol-rmq-schema60652a2a",
+                    "type": "azure:storage/share:Share",
+                    "inputs": {
+                        "__defaults": [
+                            "name",
+                            "quota"
+                        ],
+                        "name": "vol-rmq-schema60652a2a",
+                        "quota": 5120,
+                        "storageAccountName": "sarmqsa622a59b8"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000},\"schema_version\":\"2\"}",
+                        "acls": [],
+                        "id": "https://sarmqsa622a59b8.file.core.windows.net/vol-rmq-schema60652a2a",
+                        "metadata": {},
+                        "name": "vol-rmq-schema60652a2a",
+                        "quota": 5120,
+                        "resourceManagerId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Storage/storageAccounts/sarmqsa622a59b8/fileServices/default/shares/vol-rmq-schema60652a2a",
+                        "storageAccountName": "sarmqsa622a59b8",
+                        "url": "https://sarmqsa622a59b8.file.core.windows.net/vol-rmq-schema60652a2a"
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/account:Account::sarmqsa"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "storageAccountName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/account:Account::sarmqsa"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/share:Share::vol-rmq-config",
+                    "custom": true,
+                    "id": "https://sarmqsa622a59b8.file.core.windows.net/vol-rmq-configfa5e2614",
+                    "type": "azure:storage/share:Share",
+                    "inputs": {
+                        "__defaults": [
+                            "name",
+                            "quota"
+                        ],
+                        "name": "vol-rmq-configfa5e2614",
+                        "quota": 5120,
+                        "storageAccountName": "sarmqsa622a59b8"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000},\"schema_version\":\"2\"}",
+                        "acls": [],
+                        "id": "https://sarmqsa622a59b8.file.core.windows.net/vol-rmq-configfa5e2614",
+                        "metadata": {},
+                        "name": "vol-rmq-configfa5e2614",
+                        "quota": 5120,
+                        "resourceManagerId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Storage/storageAccounts/sarmqsa622a59b8/fileServices/default/shares/vol-rmq-configfa5e2614",
+                        "storageAccountName": "sarmqsa622a59b8",
+                        "url": "https://sarmqsa622a59b8.file.core.windows.net/vol-rmq-configfa5e2614"
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/account:Account::sarmqsa"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "storageAccountName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/account:Account::sarmqsa"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/share:Share::vol-rmq-mnesia",
+                    "custom": true,
+                    "id": "https://sarmqsa622a59b8.file.core.windows.net/vol-rmq-mnesia672e8dc3",
+                    "type": "azure:storage/share:Share",
+                    "inputs": {
+                        "__defaults": [
+                            "name",
+                            "quota"
+                        ],
+                        "name": "vol-rmq-mnesia672e8dc3",
+                        "quota": 5120,
+                        "storageAccountName": "sarmqsa622a59b8"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000},\"schema_version\":\"2\"}",
+                        "acls": [],
+                        "id": "https://sarmqsa622a59b8.file.core.windows.net/vol-rmq-mnesia672e8dc3",
+                        "metadata": {},
+                        "name": "vol-rmq-mnesia672e8dc3",
+                        "quota": 5120,
+                        "resourceManagerId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Storage/storageAccounts/sarmqsa622a59b8/fileServices/default/shares/vol-rmq-mnesia672e8dc3",
+                        "storageAccountName": "sarmqsa622a59b8",
+                        "url": "https://sarmqsa622a59b8.file.core.windows.net/vol-rmq-mnesia672e8dc3"
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/account:Account::sarmqsa"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "storageAccountName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/account:Account::sarmqsa"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/subnet:Subnet::snet-vm",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7/subnets/snet-vm000be9cc",
+                    "type": "azure:network/subnet:Subnet",
+                    "inputs": {
+                        "__defaults": [
+                            "enforcePrivateLinkEndpointNetworkPolicies",
+                            "enforcePrivateLinkServiceNetworkPolicies",
+                            "name"
+                        ],
+                        "addressPrefixes": [
+                            "10.1.0.0/16"
+                        ],
+                        "enforcePrivateLinkEndpointNetworkPolicies": false,
+                        "enforcePrivateLinkServiceNetworkPolicies": false,
+                        "name": "snet-vm000be9cc",
+                        "resourceGroupName": "rg-vma41703c5",
+                        "virtualNetworkName": "vnet-vm9d0083a7"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "addressPrefix": "10.1.0.0/16",
+                        "addressPrefixes": [
+                            "10.1.0.0/16"
+                        ],
+                        "delegations": [],
+                        "enforcePrivateLinkEndpointNetworkPolicies": false,
+                        "enforcePrivateLinkServiceNetworkPolicies": false,
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7/subnets/snet-vm000be9cc",
+                        "name": "snet-vm000be9cc",
+                        "resourceGroupName": "rg-vma41703c5",
+                        "serviceEndpoints": [],
+                        "virtualNetworkName": "vnet-vm9d0083a7"
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-vm"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "addressPrefixes": null,
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm"
+                        ],
+                        "virtualNetworkName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-vm"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/subnet:Subnet::snet-snet-rmq-in-",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/virtualNetworks/vnet-rmq288663d6/subnets/snet-snet-rmq-in-8356b942",
+                    "type": "azure:network/subnet:Subnet",
+                    "inputs": {
+                        "__defaults": [
+                            "enforcePrivateLinkEndpointNetworkPolicies",
+                            "enforcePrivateLinkServiceNetworkPolicies",
+                            "name"
+                        ],
+                        "addressPrefixes": [
+                            "10.2.0.0/16"
+                        ],
+                        "delegations": [
+                            {
+                                "__defaults": [],
+                                "name": "snet-delegation-snet-rmq",
+                                "serviceDelegation": {
+                                    "__defaults": [],
+                                    "name": "Microsoft.ContainerInstance/containerGroups"
+                                }
+                            }
+                        ],
+                        "enforcePrivateLinkEndpointNetworkPolicies": false,
+                        "enforcePrivateLinkServiceNetworkPolicies": false,
+                        "name": "snet-snet-rmq-in-8356b942",
+                        "resourceGroupName": "rg-rmqd8c3a01a",
+                        "serviceEndpoints": [
+                            "Microsoft.Storage"
+                        ],
+                        "virtualNetworkName": "vnet-rmq288663d6"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "addressPrefix": "10.2.0.0/16",
+                        "addressPrefixes": [
+                            "10.2.0.0/16"
+                        ],
+                        "delegations": [
+                            {
+                                "name": "snet-delegation-snet-rmq",
+                                "serviceDelegation": {
+                                    "actions": [
+                                        "Microsoft.Network/virtualNetworks/subnets/action"
+                                    ],
+                                    "name": "Microsoft.ContainerInstance/containerGroups"
+                                }
+                            }
+                        ],
+                        "enforcePrivateLinkEndpointNetworkPolicies": false,
+                        "enforcePrivateLinkServiceNetworkPolicies": false,
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/virtualNetworks/vnet-rmq288663d6/subnets/snet-snet-rmq-in-8356b942",
+                        "name": "snet-snet-rmq-in-8356b942",
+                        "resourceGroupName": "rg-rmqd8c3a01a",
+                        "serviceEndpoints": [
+                            "Microsoft.Storage"
+                        ],
+                        "virtualNetworkName": "vnet-rmq288663d6"
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-rmq"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "addressPrefixes": null,
+                        "delegations": null,
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq"
+                        ],
+                        "serviceEndpoints": null,
+                        "virtualNetworkName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-rmq"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/networkInterface:NetworkInterface::ni-vm",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/networkInterfaces/ni-vm247ade21",
+                    "type": "azure:network/networkInterface:NetworkInterface",
+                    "inputs": {
+                        "__defaults": [
+                            "enableAcceleratedNetworking",
+                            "enableIpForwarding",
+                            "name"
+                        ],
+                        "enableAcceleratedNetworking": false,
+                        "enableIpForwarding": false,
+                        "ipConfigurations": [
+                            {
+                                "__defaults": [
+                                    "privateIpAddressVersion"
+                                ],
+                                "name": "internal",
+                                "privateIpAddressAllocation": "Dynamic",
+                                "privateIpAddressVersion": "IPv4",
+                                "publicIpAddressId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/publicIPAddresses/pip-vm9d5925e0",
+                                "subnetId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7/subnets/snet-vm000be9cc"
+                            }
+                        ],
+                        "location": "uksouth",
+                        "name": "ni-vm247ade21",
+                        "resourceGroupName": "rg-vma41703c5"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "appliedDnsServers": [],
+                        "dnsServers": [],
+                        "enableAcceleratedNetworking": false,
+                        "enableIpForwarding": false,
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/networkInterfaces/ni-vm247ade21",
+                        "internalDnsNameLabel": "",
+                        "internalDomainNameSuffix": "sjxgzsdkc0qufl3wqyzwpfeiib.zx.internal.cloudapp.net",
+                        "ipConfigurations": [
+                            {
+                                "name": "internal",
+                                "primary": true,
+                                "privateIpAddress": "10.1.0.4",
+                                "privateIpAddressAllocation": "Dynamic",
+                                "privateIpAddressVersion": "IPv4",
+                                "publicIpAddressId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/publicIPAddresses/pip-vm9d5925e0",
+                                "subnetId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7/subnets/snet-vm000be9cc"
+                            }
+                        ],
+                        "location": "uksouth",
+                        "macAddress": "",
+                        "name": "ni-vm247ade21",
+                        "privateIpAddress": "10.1.0.4",
+                        "privateIpAddresses": [
+                            "10.1.0.4"
+                        ],
+                        "resourceGroupName": "rg-vma41703c5",
+                        "tags": {},
+                        "virtualMachineId": ""
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/publicIp:PublicIp::pip-vm",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/subnet:Subnet::snet-vm"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "ipConfigurations": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/publicIp:PublicIp::pip-vm",
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/subnet:Subnet::snet-vm"
+                        ],
+                        "location": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm"
+                        ],
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/profile:Profile::np-rmq",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/networkProfiles/np-rmq05170db7",
+                    "type": "azure:network/profile:Profile",
+                    "inputs": {
+                        "__defaults": [
+                            "name"
+                        ],
+                        "containerNetworkInterface": {
+                            "__defaults": [],
+                            "ipConfigurations": [
+                                {
+                                    "__defaults": [],
+                                    "name": "np-rmq-ipconfig",
+                                    "subnetId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/virtualNetworks/vnet-rmq288663d6/subnets/snet-snet-rmq-in-8356b942"
+                                }
+                            ],
+                            "name": "np-rmq-nic"
+                        },
+                        "location": "uksouth",
+                        "name": "np-rmq05170db7",
+                        "resourceGroupName": "rg-rmqd8c3a01a"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "containerNetworkInterface": {
+                            "ipConfigurations": [
+                                {
+                                    "name": "np-rmq-ipconfig",
+                                    "subnetId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/virtualNetworks/vnet-rmq288663d6/subnets/snet-snet-rmq-in-8356b942"
+                                }
+                            ],
+                            "name": "np-rmq-nic"
+                        },
+                        "containerNetworkInterfaceIds": [],
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/networkProfiles/np-rmq05170db7",
+                        "location": "uksouth",
+                        "name": "np-rmq05170db7",
+                        "resourceGroupName": "rg-rmqd8c3a01a",
+                        "tags": {}
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/subnet:Subnet::snet-snet-rmq-in-"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "containerNetworkInterface": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/subnet:Subnet::snet-snet-rmq-in-"
+                        ],
+                        "location": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq"
+                        ],
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetworkPeering:VirtualNetworkPeering::vnp-rmq",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/virtualNetworks/vnet-rmq288663d6/virtualNetworkPeerings/vnp-rmq76ef67a5",
+                    "type": "azure:network/virtualNetworkPeering:VirtualNetworkPeering",
+                    "inputs": {
+                        "__defaults": [
+                            "allowVirtualNetworkAccess",
+                            "name"
+                        ],
+                        "allowForwardedTraffic": true,
+                        "allowVirtualNetworkAccess": true,
+                        "name": "vnp-rmq76ef67a5",
+                        "remoteVirtualNetworkId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7",
+                        "resourceGroupName": "rg-rmqd8c3a01a",
+                        "virtualNetworkName": "vnet-rmq288663d6"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "allowForwardedTraffic": true,
+                        "allowGatewayTransit": false,
+                        "allowVirtualNetworkAccess": true,
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/virtualNetworks/vnet-rmq288663d6/virtualNetworkPeerings/vnp-rmq76ef67a5",
+                        "name": "vnp-rmq76ef67a5",
+                        "remoteVirtualNetworkId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7",
+                        "resourceGroupName": "rg-rmqd8c3a01a",
+                        "useRemoteGateways": false,
+                        "virtualNetworkName": "vnet-rmq288663d6"
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-vm",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-rmq"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "allowForwardedTraffic": null,
+                        "remoteVirtualNetworkId": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-vm"
+                        ],
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq"
+                        ],
+                        "virtualNetworkName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-rmq"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:privatedns/zone:Zone::example.internal",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-dnsae258f85/providers/Microsoft.Network/privateDnsZones/example.internal",
+                    "type": "azure:privatedns/zone:Zone",
+                    "inputs": {
+                        "__defaults": [],
+                        "name": "example.internal",
+                        "resourceGroupName": "rg-dnsae258f85"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-dnsae258f85/providers/Microsoft.Network/privateDnsZones/example.internal",
+                        "maxNumberOfRecordSets": 25000,
+                        "maxNumberOfVirtualNetworkLinks": 1000,
+                        "maxNumberOfVirtualNetworkLinksWithRegistration": 100,
+                        "name": "example.internal",
+                        "numberOfRecordSets": 1,
+                        "resourceGroupName": "rg-dnsae258f85",
+                        "tags": {}
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-dns"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "name": null,
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-dns"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:compute/linuxVirtualMachine:LinuxVirtualMachine::vm-service",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Compute/virtualMachines/vm-service73579356",
+                    "type": "azure:compute/linuxVirtualMachine:LinuxVirtualMachine",
+                    "inputs": {
+                        "__defaults": [
+                            "allowExtensionOperations",
+                            "maxBidPrice",
+                            "name",
+                            "priority",
+                            "provisionVmAgent"
+                        ],
+                        "adminPassword": "Password1234!",
+                        "adminUsername": "adminuser",
+                        "allowExtensionOperations": true,
+                        "disablePasswordAuthentication": false,
+                        "location": "uksouth",
+                        "maxBidPrice": -1,
+                        "name": "vm-service73579356",
+                        "networkInterfaceIds": [
+                            "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/networkInterfaces/ni-vm247ade21"
+                        ],
+                        "osDisk": {
+                            "__defaults": [
+                                "writeAcceleratorEnabled"
+                            ],
+                            "caching": "ReadWrite",
+                            "storageAccountType": "Standard_LRS",
+                            "writeAcceleratorEnabled": false
+                        },
+                        "priority": "Regular",
+                        "provisionVmAgent": true,
+                        "resourceGroupName": "rg-vma41703c5",
+                        "size": "Standard_B2S",
+                        "sourceImageReference": {
+                            "__defaults": [],
+                            "offer": "UbuntuServer",
+                            "publisher": "Canonical",
+                            "sku": "16.04-LTS",
+                            "version": "latest"
+                        }
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":2700000000000,\"delete\":2700000000000,\"read\":300000000000,\"update\":2700000000000}}",
+                        "additionalCapabilities": null,
+                        "adminPassword": "Password1234!",
+                        "adminSshKeys": [],
+                        "adminUsername": "adminuser",
+                        "allowExtensionOperations": true,
+                        "availabilitySetId": "",
+                        "bootDiagnostics": null,
+                        "computerName": "vm-service73579356",
+                        "dedicatedHostId": "",
+                        "disablePasswordAuthentication": false,
+                        "evictionPolicy": "",
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Compute/virtualMachines/vm-service73579356",
+                        "identity": null,
+                        "location": "uksouth",
+                        "maxBidPrice": -1,
+                        "name": "vm-service73579356",
+                        "networkInterfaceIds": [
+                            "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/networkInterfaces/ni-vm247ade21"
+                        ],
+                        "osDisk": {
+                            "caching": "ReadWrite",
+                            "diffDiskSettings": null,
+                            "diskEncryptionSetId": "",
+                            "diskSizeGb": 30,
+                            "name": "vm-service73579356_disk1_a2cefaaea8a34e8995f237b09c636217",
+                            "storageAccountType": "Standard_LRS",
+                            "writeAcceleratorEnabled": false
+                        },
+                        "plan": null,
+                        "priority": "Regular",
+                        "privateIpAddress": "10.1.0.4",
+                        "privateIpAddresses": [
+                            "10.1.0.4"
+                        ],
+                        "provisionVmAgent": true,
+                        "proximityPlacementGroupId": "",
+                        "publicIpAddress": "20.90.80.52",
+                        "publicIpAddresses": [
+                            "20.90.80.52"
+                        ],
+                        "resourceGroupName": "rg-vma41703c5",
+                        "secrets": [],
+                        "size": "Standard_B2s",
+                        "sourceImageId": "",
+                        "sourceImageReference": {
+                            "offer": "UbuntuServer",
+                            "publisher": "Canonical",
+                            "sku": "16.04-LTS",
+                            "version": "latest"
+                        },
+                        "tags": {},
+                        "virtualMachineId": "06a96f53-f6f1-412a-a789-4e5fc7225b0e",
+                        "virtualMachineScaleSetId": "",
+                        "zone": ""
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/networkInterface:NetworkInterface::ni-vm"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "adminPassword": null,
+                        "adminUsername": null,
+                        "disablePasswordAuthentication": null,
+                        "location": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm"
+                        ],
+                        "networkInterfaceIds": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/networkInterface:NetworkInterface::ni-vm"
+                        ],
+                        "osDisk": null,
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm"
+                        ],
+                        "size": null,
+                        "sourceImageReference": null
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:privatedns/zoneVirtualNetworkLink:ZoneVirtualNetworkLink::zoneline-rmq",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-dnsae258f85/providers/Microsoft.Network/privateDnsZones/example.internal/virtualNetworkLinks/zoneline-rmq220257a9",
+                    "type": "azure:privatedns/zoneVirtualNetworkLink:ZoneVirtualNetworkLink",
+                    "inputs": {
+                        "__defaults": [
+                            "name"
+                        ],
+                        "name": "zoneline-rmq220257a9",
+                        "privateDnsZoneName": "example.internal",
+                        "registrationEnabled": false,
+                        "resourceGroupName": "rg-dnsae258f85",
+                        "virtualNetworkId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/virtualNetworks/vnet-rmq288663d6"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-dnsae258f85/providers/Microsoft.Network/privateDnsZones/example.internal/virtualNetworkLinks/zoneline-rmq220257a9",
+                        "name": "zoneline-rmq220257a9",
+                        "privateDnsZoneName": "example.internal",
+                        "registrationEnabled": false,
+                        "resourceGroupName": "rg-dnsae258f85",
+                        "tags": {},
+                        "virtualNetworkId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/virtualNetworks/vnet-rmq288663d6"
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:privatedns/zone:Zone::example.internal",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-rmq",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-dns"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "privateDnsZoneName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:privatedns/zone:Zone::example.internal"
+                        ],
+                        "registrationEnabled": null,
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-dns"
+                        ],
+                        "virtualNetworkId": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-rmq"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:privatedns/zoneVirtualNetworkLink:ZoneVirtualNetworkLink::zonelink-vm",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-dnsae258f85/providers/Microsoft.Network/privateDnsZones/example.internal/virtualNetworkLinks/zonelink-vmff592e4b",
+                    "type": "azure:privatedns/zoneVirtualNetworkLink:ZoneVirtualNetworkLink",
+                    "inputs": {
+                        "__defaults": [
+                            "name"
+                        ],
+                        "name": "zonelink-vmff592e4b",
+                        "privateDnsZoneName": "example.internal",
+                        "registrationEnabled": false,
+                        "resourceGroupName": "rg-dnsae258f85",
+                        "virtualNetworkId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-dnsae258f85/providers/Microsoft.Network/privateDnsZones/example.internal/virtualNetworkLinks/zonelink-vmff592e4b",
+                        "name": "zonelink-vmff592e4b",
+                        "privateDnsZoneName": "example.internal",
+                        "registrationEnabled": false,
+                        "resourceGroupName": "rg-dnsae258f85",
+                        "tags": {},
+                        "virtualNetworkId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7"
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:privatedns/zone:Zone::example.internal",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-vm",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-dns"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "privateDnsZoneName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:privatedns/zone:Zone::example.internal"
+                        ],
+                        "registrationEnabled": null,
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-dns"
+                        ],
+                        "virtualNetworkId": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-vm"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetworkPeering:VirtualNetworkPeering::vnp-vm",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7/virtualNetworkPeerings/vnp-vme42d1f77",
+                    "type": "azure:network/virtualNetworkPeering:VirtualNetworkPeering",
+                    "inputs": {
+                        "__defaults": [
+                            "allowVirtualNetworkAccess",
+                            "name"
+                        ],
+                        "allowForwardedTraffic": true,
+                        "allowVirtualNetworkAccess": true,
+                        "name": "vnp-vme42d1f77",
+                        "remoteVirtualNetworkId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/virtualNetworks/vnet-rmq288663d6",
+                        "resourceGroupName": "rg-vma41703c5",
+                        "virtualNetworkName": "vnet-vm9d0083a7"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "allowForwardedTraffic": true,
+                        "allowGatewayTransit": false,
+                        "allowVirtualNetworkAccess": true,
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7/virtualNetworkPeerings/vnp-vme42d1f77",
+                        "name": "vnp-vme42d1f77",
+                        "remoteVirtualNetworkId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/virtualNetworks/vnet-rmq288663d6",
+                        "resourceGroupName": "rg-vma41703c5",
+                        "useRemoteGateways": false,
+                        "virtualNetworkName": "vnet-vm9d0083a7"
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-rmq",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-vm"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "allowForwardedTraffic": null,
+                        "remoteVirtualNetworkId": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-rmq"
+                        ],
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm"
+                        ],
+                        "virtualNetworkName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/virtualNetwork:VirtualNetwork::vnet-vm"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:containerservice/group:Group::aci-rmq",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.ContainerInstance/containerGroups/aci-rmqbfd0a702",
+                    "type": "azure:containerservice/group:Group",
+                    "inputs": {
+                        "__defaults": [
+                            "name",
+                            "restartPolicy"
+                        ],
+                        "containers": [
+                            {
+                                "__defaults": [],
+                                "commands": [
+                                    "/bin/bash",
+                                    "-c",
+                                    "(sleep 60 \u0026\u0026 docker-entrypoint.sh rabbitmq-server) \u0026 wait"
+                                ],
+                                "cpu": 1,
+                                "environmentVariables": {
+                                    "RABBITMQ_ERLANG_COOKIE": "LHPHUKALTJYRFIZQGLTQ",
+                                    "RABBITMQ_NODENAME": "rabbit@rmq.example.internal",
+                                    "RABBITMQ_USE_LONGNAME": "true",
+                                    "__defaults": []
+                                },
+                                "image": "rabbitmq",
+                                "memory": 1.5,
+                                "name": "rabbitmq",
+                                "ports": [
+                                    {
+                                        "__defaults": [],
+                                        "port": 15672,
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "__defaults": [],
+                                        "port": 25672,
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "__defaults": [],
+                                        "port": 5672,
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "__defaults": [],
+                                        "port": 4369,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "volumes": [
+                                    {
+                                        "__defaults": [
+                                            "readOnly"
+                                        ],
+                                        "mountPath": "/var/lib/rabbitmq/config",
+                                        "name": "vol-rmq-config",
+                                        "readOnly": false,
+                                        "shareName": "vol-rmq-configfa5e2614",
+                                        "storageAccountKey": "5ArwFklXKV/pqGsdRzVCuEJQUSExuFnDzaUSzFq1UJ5oGBk6TZx5LL14WRvWUMqryzt9GLOhp6qwg1FQMe2e+g==",
+                                        "storageAccountName": "sarmqsa622a59b8"
+                                    },
+                                    {
+                                        "__defaults": [
+                                            "readOnly"
+                                        ],
+                                        "mountPath": "/var/lib/rabbitmq/mnesia",
+                                        "name": "vol-rmq-mnesia",
+                                        "readOnly": false,
+                                        "shareName": "vol-rmq-mnesia672e8dc3",
+                                        "storageAccountKey": "5ArwFklXKV/pqGsdRzVCuEJQUSExuFnDzaUSzFq1UJ5oGBk6TZx5LL14WRvWUMqryzt9GLOhp6qwg1FQMe2e+g==",
+                                        "storageAccountName": "sarmqsa622a59b8"
+                                    },
+                                    {
+                                        "__defaults": [
+                                            "readOnly"
+                                        ],
+                                        "mountPath": "/var/lib/rabbitmq/schema",
+                                        "name": "vol-rmq-schema",
+                                        "readOnly": false,
+                                        "shareName": "vol-rmq-schema60652a2a",
+                                        "storageAccountKey": "5ArwFklXKV/pqGsdRzVCuEJQUSExuFnDzaUSzFq1UJ5oGBk6TZx5LL14WRvWUMqryzt9GLOhp6qwg1FQMe2e+g==",
+                                        "storageAccountName": "sarmqsa622a59b8"
+                                    }
+                                ]
+                            }
+                        ],
+                        "ipAddressType": "Private",
+                        "location": "uksouth",
+                        "name": "aci-rmqbfd0a702",
+                        "networkProfileId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/networkProfiles/np-rmq05170db7",
+                        "osType": "Linux",
+                        "resourceGroupName": "rg-rmqd8c3a01a",
+                        "restartPolicy": "Always"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "containers": [
+                            {
+                                "commands": [
+                                    "/bin/bash",
+                                    "-c",
+                                    "(sleep 60 \u0026\u0026 docker-entrypoint.sh rabbitmq-server) \u0026 wait"
+                                ],
+                                "cpu": 1,
+                                "environmentVariables": {
+                                    "RABBITMQ_ERLANG_COOKIE": "LHPHUKALTJYRFIZQGLTQ",
+                                    "RABBITMQ_NODENAME": "rabbit@rmq.example.internal",
+                                    "RABBITMQ_USE_LONGNAME": "true"
+                                },
+                                "gpu": null,
+                                "image": "rabbitmq",
+                                "livenessProbe": null,
+                                "memory": 1.5,
+                                "name": "rabbitmq",
+                                "ports": [
+                                    {
+                                        "port": 25672,
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "port": 4369,
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "port": 15672,
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "port": 5672,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "readinessProbe": null,
+                                "secureEnvironmentVariables": {},
+                                "volumes": [
+                                    {
+                                        "mountPath": "/var/lib/rabbitmq/config",
+                                        "name": "vol-rmq-config",
+                                        "readOnly": false,
+                                        "shareName": "vol-rmq-configfa5e2614",
+                                        "storageAccountKey": "5ArwFklXKV/pqGsdRzVCuEJQUSExuFnDzaUSzFq1UJ5oGBk6TZx5LL14WRvWUMqryzt9GLOhp6qwg1FQMe2e+g==",
+                                        "storageAccountName": "sarmqsa622a59b8"
+                                    },
+                                    {
+                                        "mountPath": "/var/lib/rabbitmq/mnesia",
+                                        "name": "vol-rmq-mnesia",
+                                        "readOnly": false,
+                                        "shareName": "vol-rmq-mnesia672e8dc3",
+                                        "storageAccountKey": "5ArwFklXKV/pqGsdRzVCuEJQUSExuFnDzaUSzFq1UJ5oGBk6TZx5LL14WRvWUMqryzt9GLOhp6qwg1FQMe2e+g==",
+                                        "storageAccountName": "sarmqsa622a59b8"
+                                    },
+                                    {
+                                        "mountPath": "/var/lib/rabbitmq/schema",
+                                        "name": "vol-rmq-schema",
+                                        "readOnly": false,
+                                        "shareName": "vol-rmq-schema60652a2a",
+                                        "storageAccountKey": "5ArwFklXKV/pqGsdRzVCuEJQUSExuFnDzaUSzFq1UJ5oGBk6TZx5LL14WRvWUMqryzt9GLOhp6qwg1FQMe2e+g==",
+                                        "storageAccountName": "sarmqsa622a59b8"
+                                    }
+                                ]
+                            }
+                        ],
+                        "diagnostics": null,
+                        "dnsNameLabel": "",
+                        "fqdn": "",
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.ContainerInstance/containerGroups/aci-rmqbfd0a702",
+                        "identity": null,
+                        "imageRegistryCredentials": [],
+                        "ipAddress": "10.2.0.4",
+                        "ipAddressType": "Private",
+                        "location": "uksouth",
+                        "name": "aci-rmqbfd0a702",
+                        "networkProfileId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-rmqd8c3a01a/providers/Microsoft.Network/networkProfiles/np-rmq05170db7",
+                        "osType": "Linux",
+                        "resourceGroupName": "rg-rmqd8c3a01a",
+                        "restartPolicy": "Always",
+                        "tags": {}
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/account:Account::sarmqsa",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/share:Share::vol-rmq-config",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/share:Share::vol-rmq-mnesia",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/share:Share::vol-rmq-schema",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/profile:Profile::np-rmq"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "containers": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/account:Account::sarmqsa",
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/share:Share::vol-rmq-config",
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/share:Share::vol-rmq-mnesia",
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:storage/share:Share::vol-rmq-schema"
+                        ],
+                        "ipAddressType": null,
+                        "location": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq"
+                        ],
+                        "networkProfileId": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/profile:Profile::np-rmq"
+                        ],
+                        "osType": null,
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-rmq"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/networkSecurityGroup:NetworkSecurityGroup::nsg-vm",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/networkSecurityGroups/nsg-vm2c3e5ebe",
+                    "type": "azure:network/networkSecurityGroup:NetworkSecurityGroup",
+                    "inputs": {
+                        "__defaults": [
+                            "name"
+                        ],
+                        "location": "uksouth",
+                        "name": "nsg-vm2c3e5ebe",
+                        "resourceGroupName": "rg-vma41703c5",
+                        "securityRules": [
+                            {
+                                "__defaults": [],
+                                "access": "Allow",
+                                "destinationAddressPrefixes": [
+                                    "10.2.0.4"
+                                ],
+                                "destinationPortRanges": [
+                                    "15672"
+                                ],
+                                "direction": "Inbound",
+                                "name": "Allow Port 15672",
+                                "priority": 100,
+                                "protocol": "Tcp",
+                                "sourceAddressPrefix": "10.1.0.4",
+                                "sourcePortRange": "*"
+                            },
+                            {
+                                "__defaults": [],
+                                "access": "Allow",
+                                "destinationAddressPrefixes": [
+                                    "10.2.0.4"
+                                ],
+                                "destinationPortRanges": [
+                                    "25672"
+                                ],
+                                "direction": "Inbound",
+                                "name": "Allow Port 25672",
+                                "priority": 120,
+                                "protocol": "Tcp",
+                                "sourceAddressPrefix": "10.1.0.4",
+                                "sourcePortRange": "*"
+                            },
+                            {
+                                "__defaults": [],
+                                "access": "Allow",
+                                "destinationAddressPrefixes": [
+                                    "10.2.0.4"
+                                ],
+                                "destinationPortRanges": [
+                                    "5672"
+                                ],
+                                "direction": "Inbound",
+                                "name": "Allow Port 5672",
+                                "priority": 140,
+                                "protocol": "Tcp",
+                                "sourceAddressPrefix": "10.1.0.4",
+                                "sourcePortRange": "*"
+                            },
+                            {
+                                "__defaults": [],
+                                "access": "Allow",
+                                "destinationAddressPrefixes": [
+                                    "10.2.0.4"
+                                ],
+                                "destinationPortRanges": [
+                                    "4369"
+                                ],
+                                "direction": "Inbound",
+                                "name": "Allow Port 4369",
+                                "priority": 160,
+                                "protocol": "Tcp",
+                                "sourceAddressPrefix": "10.1.0.4",
+                                "sourcePortRange": "*"
+                            }
+                        ]
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/networkSecurityGroups/nsg-vm2c3e5ebe",
+                        "location": "uksouth",
+                        "name": "nsg-vm2c3e5ebe",
+                        "resourceGroupName": "rg-vma41703c5",
+                        "securityRules": [
+                            {
+                                "access": "Allow",
+                                "description": "",
+                                "destinationAddressPrefix": "",
+                                "destinationAddressPrefixes": [
+                                    "10.2.0.4"
+                                ],
+                                "destinationApplicationSecurityGroupIds": [],
+                                "destinationPortRange": "",
+                                "destinationPortRanges": [
+                                    "4369"
+                                ],
+                                "direction": "Inbound",
+                                "name": "Allow Port 4369",
+                                "priority": 160,
+                                "protocol": "Tcp",
+                                "sourceAddressPrefix": "10.1.0.4",
+                                "sourceAddressPrefixes": [],
+                                "sourceApplicationSecurityGroupIds": [],
+                                "sourcePortRange": "*",
+                                "sourcePortRanges": []
+                            },
+                            {
+                                "access": "Allow",
+                                "description": "",
+                                "destinationAddressPrefix": "",
+                                "destinationAddressPrefixes": [
+                                    "10.2.0.4"
+                                ],
+                                "destinationApplicationSecurityGroupIds": [],
+                                "destinationPortRange": "",
+                                "destinationPortRanges": [
+                                    "25672"
+                                ],
+                                "direction": "Inbound",
+                                "name": "Allow Port 25672",
+                                "priority": 120,
+                                "protocol": "Tcp",
+                                "sourceAddressPrefix": "10.1.0.4",
+                                "sourceAddressPrefixes": [],
+                                "sourceApplicationSecurityGroupIds": [],
+                                "sourcePortRange": "*",
+                                "sourcePortRanges": []
+                            },
+                            {
+                                "access": "Allow",
+                                "description": "",
+                                "destinationAddressPrefix": "",
+                                "destinationAddressPrefixes": [
+                                    "10.2.0.4"
+                                ],
+                                "destinationApplicationSecurityGroupIds": [],
+                                "destinationPortRange": "",
+                                "destinationPortRanges": [
+                                    "5672"
+                                ],
+                                "direction": "Inbound",
+                                "name": "Allow Port 5672",
+                                "priority": 140,
+                                "protocol": "Tcp",
+                                "sourceAddressPrefix": "10.1.0.4",
+                                "sourceAddressPrefixes": [],
+                                "sourceApplicationSecurityGroupIds": [],
+                                "sourcePortRange": "*",
+                                "sourcePortRanges": []
+                            },
+                            {
+                                "access": "Allow",
+                                "description": "",
+                                "destinationAddressPrefix": "",
+                                "destinationAddressPrefixes": [
+                                    "10.2.0.4"
+                                ],
+                                "destinationApplicationSecurityGroupIds": [],
+                                "destinationPortRange": "",
+                                "destinationPortRanges": [
+                                    "15672"
+                                ],
+                                "direction": "Inbound",
+                                "name": "Allow Port 15672",
+                                "priority": 100,
+                                "protocol": "Tcp",
+                                "sourceAddressPrefix": "10.1.0.4",
+                                "sourceAddressPrefixes": [],
+                                "sourceApplicationSecurityGroupIds": [],
+                                "sourcePortRange": "*",
+                                "sourcePortRanges": []
+                            }
+                        ],
+                        "tags": {}
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/networkInterface:NetworkInterface::ni-vm",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:containerservice/group:Group::aci-rmq",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "location": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm"
+                        ],
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-vm"
+                        ],
+                        "securityRules": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/networkInterface:NetworkInterface::ni-vm",
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:containerservice/group:Group::aci-rmq"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:privatedns/aRecord:ARecord::a-rmq",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-dnsae258f85/providers/Microsoft.Network/privateDnsZones/example.internal/A/a-rmq",
+                    "type": "azure:privatedns/aRecord:ARecord",
+                    "inputs": {
+                        "__defaults": [],
+                        "name": "a-rmq",
+                        "records": [
+                            "10.2.0.4"
+                        ],
+                        "resourceGroupName": "rg-dnsae258f85",
+                        "ttl": 300,
+                        "zoneName": "example.internal"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "fqdn": "a-rmq.example.internal.",
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-dnsae258f85/providers/Microsoft.Network/privateDnsZones/example.internal/A/a-rmq",
+                        "name": "a-rmq",
+                        "records": [
+                            "10.2.0.4"
+                        ],
+                        "resourceGroupName": "rg-dnsae258f85",
+                        "tags": {},
+                        "ttl": 300,
+                        "zoneName": "example.internal"
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:privatedns/zone:Zone::example.internal",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-dns",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:containerservice/group:Group::aci-rmq"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "name": null,
+                        "records": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:containerservice/group:Group::aci-rmq"
+                        ],
+                        "resourceGroupName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:core/resourceGroup:ResourceGroup::rg-dns"
+                        ],
+                        "ttl": null,
+                        "zoneName": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:privatedns/zone:Zone::example.internal"
+                        ]
+                    }
+                },
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/subnetNetworkSecurityGroupAssociation:SubnetNetworkSecurityGroupAssociation::sNet-nsg-vm",
+                    "custom": true,
+                    "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7/subnets/snet-vm000be9cc",
+                    "type": "azure:network/subnetNetworkSecurityGroupAssociation:SubnetNetworkSecurityGroupAssociation",
+                    "inputs": {
+                        "__defaults": [],
+                        "networkSecurityGroupId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/networkSecurityGroups/nsg-vm2c3e5ebe",
+                        "subnetId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7/subnets/snet-vm000be9cc"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1800000000000,\"delete\":1800000000000,\"read\":300000000000,\"update\":1800000000000}}",
+                        "id": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7/subnets/snet-vm000be9cc",
+                        "networkSecurityGroupId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/networkSecurityGroups/nsg-vm2c3e5ebe",
+                        "subnetId": "/subscriptions/7ce71227-2a47-4a7b-9f94-b26d1c4d436c/resourceGroups/rg-vma41703c5/providers/Microsoft.Network/virtualNetworks/vnet-vm9d0083a7/subnets/snet-vm000be9cc"
+                    },
+                    "parent": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:pulumi:Stack::pulumi-rabbitmq-azure-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/networkSecurityGroup:NetworkSecurityGroup::nsg-vm",
+                        "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/subnet:Subnet::snet-vm"
+                    ],
+                    "provider": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0::f54a924a-d59a-4517-af45-2e1573654c8c",
+                    "propertyDependencies": {
+                        "networkSecurityGroupId": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/networkSecurityGroup:NetworkSecurityGroup::nsg-vm"
+                        ],
+                        "subnetId": [
+                            "urn:pulumi:dev::pulumi-rabbitmq-azure::azure:network/subnet:Subnet::snet-vm"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

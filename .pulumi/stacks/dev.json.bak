@@ -1,0 +1,50 @@
+{
+    "version": 3,
+    "checkpoint": {
+        "stack": "dev",
+        "latest": {
+            "manifest": {
+                "time": "2021-09-12T16:59:33.7901017+01:00",
+                "magic": "b9252cabf480c88f281e0d29a10d6b8889ddc9fcbc466d4f9374c0fb69b330b8",
+                "version": "v3.12.0"
+            },
+            "secrets_providers": {
+                "type": "passphrase",
+                "state": {
+                    "salt": "v1:1uwbXtn9U2A=:v1:kM9Sk13PiObB8x52:O983H1iUrn3GXzZt/Rcg1NfTNZTcIw=="
+                }
+            },
+            "resources": [
+                {
+                    "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0",
+                    "custom": true,
+                    "id": "0d2d6cd1-0f8f-4524-b332-152a6b8633fb",
+                    "type": "pulumi:providers:azure",
+                    "inputs": {
+                        "version": "3.11.0"
+                    },
+                    "outputs": {
+                        "version": "3.11.0"
+                    }
+                }
+            ],
+            "pending_operations": [
+                {
+                    "resource": {
+                        "urn": "urn:pulumi:dev::pulumi-rabbitmq-azure::pulumi:providers:azure::default_3_11_0",
+                        "custom": true,
+                        "id": "0d2d6cd1-0f8f-4524-b332-152a6b8633fb",
+                        "type": "pulumi:providers:azure",
+                        "inputs": {
+                            "version": "3.11.0"
+                        },
+                        "outputs": {
+                            "version": "3.11.0"
+                        }
+                    },
+                    "type": "deleting"
+                }
+            ]
+        }
+    }
+}

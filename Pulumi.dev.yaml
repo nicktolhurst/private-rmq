@@ -1,0 +1,4 @@
+encryptionsalt: v1:1uwbXtn9U2A=:v1:kM9Sk13PiObB8x52:O983H1iUrn3GXzZt/Rcg1NfTNZTcIw==
+config:
+  pulumi-rabbitmq-azure:PrivateDnsZoneName: example.internal
+  pulumi-rabbitmq-azure:Location: uksouth

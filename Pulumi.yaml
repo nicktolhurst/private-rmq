@@ -1,0 +1,3 @@
+name: pulumi-rabbitmq-azure
+runtime: dotnet
+description: RabbitMQ Cluster on Azure

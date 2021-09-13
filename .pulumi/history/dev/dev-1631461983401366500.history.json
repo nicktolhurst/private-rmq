@@ -1,0 +1,29 @@
+{
+    "kind": "update",
+    "startTime": 1631461973,
+    "message": "Added MIT license to repo",
+    "environment": {
+        "exec.kind": "cli",
+        "git.author": "Itay Podhajcer",
+        "git.author.email": "itay.pudi@podhajcersolutions.com",
+        "git.committer": "GitHub",
+        "git.committer.email": "noreply@github.com",
+        "git.dirty": "true",
+        "git.head": "4fa84dc41a2bdb08c190af97e47609f9b12c0652",
+        "git.headName": "refs/heads/master",
+        "vcs.kind": "github.com",
+        "vcs.owner": "cladular",
+        "vcs.repo": "pulumi-rabbitmq-azure"
+    },
+    "config": {
+        "pulumi-rabbitmq-azure:Location": "uksouth",
+        "pulumi-rabbitmq-azure:PrivateDnsZoneName": "example.internal"
+    },
+    "version": 0,
+    "result": "failed",
+    "endTime": 1631461983,
+    "resourceChanges": {
+        "same": 19,
+        "update": 1
+    }
+}
